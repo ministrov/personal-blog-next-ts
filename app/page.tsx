@@ -1,16 +1,22 @@
 import BlogCard from './components/BlogCard/BlogCard';
+import { BLOG_CARDS_MOCKS } from '@/mocks';
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <BlogCard
-        img={'/card-image.png'}
-        title={'Как работать с CSS Grid'}
-        text={'Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы..'}
-        timeStamp={3}
-        likes={4}
-      />
+      <div className={styles.pageCardList}>
+        {BLOG_CARDS_MOCKS.map((card) => (
+          <BlogCard
+            key={card.id}
+            img={card.img}
+            title={card.title}
+            text={card.text}
+            timeStamp={card.timeStamp}
+            likes={card.likes}
+          />
+        ))}
+      </div>
     </div>
   );
 }
