@@ -1,8 +1,8 @@
 
 import { BlogCardProps } from './BlogCard.props';
+import CardLink from '../CardLink/CardLink';
 import Image from 'next/image';
 import styles from './BlogCard.module.css';
-import CardLink from '../CardLink/CardLink';
 
 const BlogCard = ({ img, title, text, timeStamp, likes }: BlogCardProps) => {
     return (
@@ -18,7 +18,7 @@ const BlogCard = ({ img, title, text, timeStamp, likes }: BlogCardProps) => {
 
                 <div className={styles.cardLikes}>
                     <span>{likes}</span>
-                    <Image src={'/like.svg'} width={11} height={11} alt={'Thumb up image'} />
+                    <Image src={'/like.svg'} width={16} height={16} alt={'Thumb up image'} />
                 </div>
             </div>
             <div className={styles.cardText}>
@@ -26,7 +26,7 @@ const BlogCard = ({ img, title, text, timeStamp, likes }: BlogCardProps) => {
                 <p className={styles.cardTextContent}>{text}</p>
             </div>
             <div className={styles.cardFooter}>
-                <span>{timeStamp}</span>
+                <span>{timeStamp} минуты</span>
 
                 <CardLink />
             </div>

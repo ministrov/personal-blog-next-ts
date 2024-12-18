@@ -1,3 +1,66 @@
 .BlogCard {
+    max-width: 350px;
+    padding: 10px;
     background-color: paleturquoise;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+}
+
+.cardImage {
+    width: 330px;
+    height: 220px;
+    margin-bottom: 16px;
+    background-color: #E5F4FF;
+    border-radius: 5px;
+}
+
+.cardMeta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardMetaList {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cardMetaItem {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--grey);
+}
+
+.cardLikes {
+    display: flex;
+    gap: 5px;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--grey);
+}
+
+.cardTitle {
+    margin: 0;
+    margin-bottom: 6px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--black);
+}
+
+.cardTextContent {
+    margin: 0;
+    margin-bottom: 21px;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--grey);
+}
+
+.cardFooter {
+    display: flex;
+    justify-content: space-between;
 }
