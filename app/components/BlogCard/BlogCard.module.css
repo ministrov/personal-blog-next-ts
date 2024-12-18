@@ -1,12 +1,14 @@
 .BlogCard {
     max-width: 350px;
     padding: 10px;
-    background-color: paleturquoise;
     border: 1px solid var(--light-grey);
     border-radius: 5px;
 }
 
 .cardImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 330px;
     height: 220px;
     margin-bottom: 16px;
@@ -63,4 +65,10 @@
 .cardFooter {
     display: flex;
     justify-content: space-between;
+}
+
+.cardFooterMinutes {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--grey);
 }

@@ -1,5 +1,8 @@
 .cardLink {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     font-size: 12px;
     line-height: 16px;
-    background-color: #1473E6;
+    color: #1473E6;
 }
