@@ -12,6 +12,8 @@
     cursor: pointer;
 }
 
-.likeBtnActive .likeBtn {
-    color: var(--white);
+.likeBtnActive {
+    border: none;
+    background-color: var(--grey-dark);
+    /* color: var(--white); */
 }
