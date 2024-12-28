@@ -1,6 +1,7 @@
 import BlogCard from './components/BlogCard/BlogCard';
 import { BLOG_CARDS_MOCKS } from '@/mocks';
 import styles from "./page.module.css";
+import LikeButton from './components/LikeButton/LikeButton';
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
           />
         ))}
       </div>
+
+      <LikeButton />
     </div>
   );
 }
