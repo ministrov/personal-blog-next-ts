@@ -1,9 +1,18 @@
+'use client';
+
+import { useState } from 'react';
+
 import BlogCard from './components/BlogCard/BlogCard';
 import { BLOG_CARDS_MOCKS } from '@/mocks';
 import styles from "./page.module.css";
 import LikeButton from './components/LikeButton/LikeButton';
 
 export default function Home() {
+  const [active, setActive] = useState<boolean>(false);
+
+  const onChangeHandler = () => {
+    setActive(x => !x);
+  }
   return (
     <div className={styles.page}>
       <div className={styles.pageCardList}>
@@ -19,7 +28,7 @@ export default function Home() {
         ))}
       </div>
 
-      <LikeButton isActive={false} />
+      <LikeButton onChange={onChangeHandler} isActive={active} />
     </div>
   );
 }

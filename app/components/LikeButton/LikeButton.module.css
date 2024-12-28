@@ -15,5 +15,4 @@
 .likeBtnActive {
     border: none;
     background-color: var(--grey-dark);
-    /* color: var(--white); */
 }
