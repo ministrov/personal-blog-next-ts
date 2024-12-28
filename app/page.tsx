@@ -2,10 +2,10 @@
 
 import { useState } from 'react';
 
+import LikeButton from './components/LikeButton/LikeButton';
 import BlogCard from './components/BlogCard/BlogCard';
 import { BLOG_CARDS_MOCKS } from '@/mocks';
 import styles from "./page.module.css";
-import LikeButton from './components/LikeButton/LikeButton';
 
 export default function Home() {
   const [active, setActive] = useState<boolean>(false);
