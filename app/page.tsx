@@ -9,23 +9,19 @@ import styles from "./page.module.css";
 
 export default function Home() {
   const [active, setActive] = useState<boolean>(false);
+  const [posts, setPosts] = useState<{ userId: number, id: number, title: string, body: string } | []>([]);
 
-  const patchRequestHandler = async (id: number) => {
+  const patchRequestHandler = async () => {
     try {
-      const response = await fetch(`https://jsonplaceholder.typicode.com/posts/:${id}`, {
-        method: 'PATCH',
-        // headers: {
-        //   'Content-type': 'application/json'
-        // },
-        // body: JSON.stringify({ title: 'Update title', body: 'Update body' })
-      });
+      const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
 
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
 
-      const data = response.json();
-      console.log('Successful PATCH request', data);
+      const data = await response.json();
+      setPosts(data);
+      console.log('Successful PATCH request', posts);
     } catch (error) {
       console.log('Error making PATCH request', error);
     }
@@ -51,7 +47,10 @@ export default function Home() {
       </div>
 
       <LikeButton onChange={onChangeHandler} isActive={active} />
-      <LikeButton onChange={() => patchRequestHandler(1)} isActive={active} />
+
+      <br />
+
+      <LikeButton onChange={() => patchRequestHandler()} isActive={active} />
     </div>
   );
 }
