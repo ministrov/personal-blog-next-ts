@@ -8,7 +8,7 @@ const BlogCard = ({ img, title, text, timeStamp, likes }: BlogCardProps) => {
     return (
         <div className={styles.BlogCard}>
             <div className={styles.cardImage}>
-                <Image src={img} width={300} height={192} alt={''} />
+                <Image src={img} width={300} height={192} priority alt={''} />
             </div>
             <div className={styles.cardMeta}>
                 <ul className={styles.cardMetaList}>
@@ -26,7 +26,7 @@ const BlogCard = ({ img, title, text, timeStamp, likes }: BlogCardProps) => {
                 <p className={styles.cardTextContent}>{text}</p>
             </div>
             <div className={styles.cardFooter}>
-                <span className={styles.cardFooterMinutes}>{timeStamp} минуты</span>
+                <span className={styles.cardTimeStamp}>{timeStamp} минуты</span>
 
                 <CardLink />
             </div>
@@ -34,4 +34,4 @@ const BlogCard = ({ img, title, text, timeStamp, likes }: BlogCardProps) => {
     )
 }
 
-export default BlogCard
+export default BlogCard;
