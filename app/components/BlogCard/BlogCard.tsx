@@ -26,7 +26,7 @@ const BlogCard = ({ img, title, text, timeStamp, likes }: BlogCardProps) => {
                 <p className={styles.cardTextContent}>{text}</p>
             </div>
             <div className={styles.cardFooter}>
-                <span className={styles.cardFooterMinutes}>{timeStamp} минуты</span>
+                <span className={styles.cardTimeStamp}>{timeStamp} минуты</span>
 
                 <CardLink />
             </div>
@@ -34,4 +34,4 @@ const BlogCard = ({ img, title, text, timeStamp, likes }: BlogCardProps) => {
     )
 }
 
-export default BlogCard
+export default BlogCard;
