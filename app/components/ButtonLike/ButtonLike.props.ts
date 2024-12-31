@@ -1,4 +1,5 @@
-export interface ButtonLikeProps {
-    isActive: boolean;
-    onChange: () => void;
+import { DetailedHTMLProps, ButtonHTMLAttributes } from 'react';
+
+export interface ButtonLikeProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+    onChange?: () => Promise<void>;
 }

@@ -2,13 +2,12 @@
 
 import { useState } from 'react';
 
-import LikeButton from './components/ButtonLike/ButtonLike';
+import ButtonLike from './components/ButtonLike/ButtonLike';
 import BlogCard from './components/BlogCard/BlogCard';
-import { BLOG_CARDS_MOCKS } from '@/mocks';
-import styles from "./page.module.css";
+import { MOCKS } from '@/mocks';
+import styles from './page.module.css';
 
 export default function Home() {
-  const [active, setActive] = useState<boolean>(false);
   const [posts, setPosts] = useState<{ userId: number, id: number, title: string, body: string } | []>([]);
 
   const patchRequestHandler = async () => {
@@ -27,14 +26,10 @@ export default function Home() {
     }
   }
 
-  const onChangeHandler = () => {
-    setActive(x => !x);
-  }
-
   return (
     <div className={styles.page}>
       <div className={styles.pageCardList}>
-        {BLOG_CARDS_MOCKS.map((card) => (
+        {MOCKS.map((card) => (
           <BlogCard
             key={card.id}
             img={card.img}
@@ -46,11 +41,11 @@ export default function Home() {
         ))}
       </div>
 
-      <LikeButton onChange={onChangeHandler} isActive={active} />
+      <ButtonLike />
 
       <br />
 
-      <LikeButton onChange={() => patchRequestHandler()} isActive={active} />
+      <ButtonLike onChange={() => patchRequestHandler()} />
     </div>
   );
 }

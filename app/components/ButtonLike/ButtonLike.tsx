@@ -1,12 +1,20 @@
+import { useState } from 'react';
 import { ButtonLikeProps } from './ButtonLike.props';
-import styles from './LikeButton.module.css';
 import IconLike from '../IconLike/IconLike';
 import IconLikeActive from '../IconLikeActive/IconLikeActive';
+import styles from './ButtonLike.module.css';
 
-const ButtonLike = ({ isActive, onChange, ...props }: ButtonLikeProps) => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const ButtonLike = ({ onChange, ...props }: ButtonLikeProps) => {
+    const [active, setActive] = useState<boolean>(false);
+
+    const onChangeHandler = () => {
+        setActive(x => !x);
+        // onChange();
+    }
     return (
-        <button {...props} onClick={onChange} className={`${styles.buttonLike} ${isActive ? styles.buttonLikeActive : ''}`}>
-            {isActive ? <IconLikeActive /> : <IconLike />}
+        <button {...props} onClick={onChangeHandler} className={`${styles.buttonLike} ${active ? styles.buttonLikeActive : ''}`}>
+            {active ? <IconLikeActive /> : <IconLike />}
         </button>
     )
 }
