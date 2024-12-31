@@ -1,4 +1,4 @@
-export interface LikeButtonProps {
+export interface ButtonLikeProps {
     isActive: boolean;
     onChange: () => void;
 }

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import LikeButton from './components/LikeButton/LikeButton';
+import LikeButton from './components/ButtonLike/ButtonLike';
 import BlogCard from './components/BlogCard/BlogCard';
 import { BLOG_CARDS_MOCKS } from '@/mocks';
 import styles from "./page.module.css";
