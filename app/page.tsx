@@ -10,7 +10,8 @@ import styles from './page.module.css';
 export default function Home() {
   const [posts, setPosts] = useState<{ userId: number, id: number, title: string, body: string } | []>([]);
 
-  const patchRequestHandler = async () => {
+  const onPatchRequestHandler = async () => {
+    console.log('request is sent');
     try {
       const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
 
@@ -45,7 +46,7 @@ export default function Home() {
 
       <br />
 
-      <ButtonLike onChange={() => patchRequestHandler()} />
+      <ButtonLike onChange={onPatchRequestHandler} />
     </div>
   );
 }
