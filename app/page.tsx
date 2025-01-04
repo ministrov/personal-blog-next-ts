@@ -21,10 +21,10 @@ export default function Home() {
 
       const data = await response.json();
       setPosts(data);
-      console.log('Successful PATCH request', posts);
     } catch (error) {
       console.log('Error making PATCH request', error);
     }
+    console.log('Successful PATCH request', posts);
   }
 
   return (
