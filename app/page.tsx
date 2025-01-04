@@ -10,10 +10,22 @@ import styles from './page.module.css';
 export default function Home() {
   const [posts, setPosts] = useState<{ userId: number, id: number, title: string, body: string } | []>([]);
 
-  const onPatchRequestHandler = async () => {
+  const onPatchRequestHandler = async (id: string) => {
     console.log('request is sent');
     try {
-      const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+      const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+        method: 'PATCH',
+        body: JSON.stringify(
+          {
+            title: 'updated'
+          }
+        ),
+        headers: {
+          'Content-type': 'application/json'
+        }
+      });
+
+      console.log(response);
 
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -46,7 +58,7 @@ export default function Home() {
 
       <br />
 
-      <ButtonLike onChange={onPatchRequestHandler} />
+      <ButtonLike onChange={() => onPatchRequestHandler('1')} />
     </div>
   );
 }
