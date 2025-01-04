@@ -11,4 +11,4 @@ const CardLink = () => {
     )
 }
 
-export default CardLink
+export default CardLink;

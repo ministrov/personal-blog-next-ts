@@ -6,4 +6,4 @@ const IconLikeActive = () => {
     )
 }
 
-export default IconLikeActive
+export default IconLikeActive;
