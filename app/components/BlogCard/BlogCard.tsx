@@ -1,6 +1,7 @@
 
 import { BlogCardProps } from './BlogCard.props';
 import CardLink from '../CardLink/CardLink';
+import IconLike from '../IconLike/IconLike';
 import Image from 'next/image';
 import styles from './BlogCard.module.css';
 
@@ -8,7 +9,7 @@ const BlogCard = ({ img, title, text, timeStamp, likes }: BlogCardProps) => {
     return (
         <div className={styles.BlogCard}>
             <div className={styles.cardImage}>
-                <Image src={img} width={300} height={192} priority alt={''} />
+                <Image src={img} width={300} height={192} priority alt={'A placeholder for the image'} />
             </div>
             <div className={styles.cardMeta}>
                 <ul className={styles.cardMetaList}>
@@ -18,7 +19,7 @@ const BlogCard = ({ img, title, text, timeStamp, likes }: BlogCardProps) => {
 
                 <div className={styles.cardLikes}>
                     <span>{likes}</span>
-                    <Image src={'/like.svg'} width={16} height={16} alt={'Thumb up image'} />
+                    <IconLike />
                 </div>
             </div>
             <div className={styles.cardText}>
