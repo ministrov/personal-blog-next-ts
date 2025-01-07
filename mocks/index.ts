@@ -7,7 +7,7 @@ interface BlogCards {
     likes: number;
 }
 
-export const BLOG_CARDS_MOCKS: BlogCards[] = [
+export const MOCKS: BlogCards[] = [
     {
         id: 1,
         img: '/card-image.png',
