@@ -1,4 +1,4 @@
-import IconThumbUp from '../IconThumbUp/IconThumbUp';
+import Image from 'next/image';
 import styles from './CardLink.module.css';
 
 const CardLink = () => {
@@ -6,7 +6,7 @@ const CardLink = () => {
         <a className={styles.cardLink} href="#">
             Читать
 
-            <IconThumbUp />
+            <Image src={'/arrow.svg'} width={20} height={20} alt='Picture of arrow right' />
         </a>
     )
 }

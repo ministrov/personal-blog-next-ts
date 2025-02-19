@@ -1,8 +1,8 @@
 
+import Image from 'next/image';
 import { BlogCardProps } from './BlogCard.props';
 import CardLink from '../CardLink/CardLink';
-// import IconLike from '../IconLike/IconLike';
-import Image from 'next/image';
+
 import styles from './BlogCard.module.css';
 
 const BlogCard = ({ img, title, text, timeStamp, likes }: BlogCardProps) => {
@@ -19,7 +19,7 @@ const BlogCard = ({ img, title, text, timeStamp, likes }: BlogCardProps) => {
 
                 <div className={styles.cardLikes}>
                     <span>{likes}</span>
-                    {/* <IconLike /> */}
+                    <Image src={'/like.svg'} width={18} height={18} alt='Picture of the thumbs up' />
                 </div>
             </div>
             <div className={styles.cardText}>
