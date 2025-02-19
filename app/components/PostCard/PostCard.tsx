@@ -7,7 +7,7 @@ import styles from './PostCard.module.css';
 
 const PostCard = ({ title, body, likes, dislikes }: PostCardProps) => {
     return (
-        <div className={styles.BlogCard}>
+        <li className={styles.postCard}>
             <div className={styles.cardImage}>
                 <Image src={'/card-image.png'} width={300} height={192} priority alt={'A placeholder for the image'} />
             </div>
@@ -31,7 +31,7 @@ const PostCard = ({ title, body, likes, dislikes }: PostCardProps) => {
 
                 <CardLink />
             </div>
-        </div>
+        </li>
     )
 }
 
