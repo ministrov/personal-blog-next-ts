@@ -25,11 +25,12 @@ const PostCard = ({ title, body, likes, dislikes }: PostCardProps) => {
             <div className={styles.cardText}>
                 <h3 className={styles.cardTitle}>{title}</h3>
                 <p className={styles.cardTextContent}>{body}</p>
-            </div>
-            <div className={styles.cardFooter}>
-                <span className={styles.cardTimeStamp}>{dislikes} минуты</span>
 
-                <CardLink />
+                <div className={styles.cardFooter}>
+                    <span className={styles.cardTimeStamp}>{dislikes} минуты</span>
+
+                    <CardLink />
+                </div>
             </div>
         </li>
     )

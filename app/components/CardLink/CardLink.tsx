@@ -1,13 +1,14 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './CardLink.module.css';
 
 const CardLink = () => {
     return (
-        <a className={styles.cardLink} href="#">
+        <Link href="#" className={styles.cardLink}>
             Читать
 
             <Image src={'/arrow.svg'} width={20} height={20} alt='Picture of arrow right' />
-        </a>
+        </Link>
     )
 }
 
