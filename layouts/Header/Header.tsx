@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <header className={styles.header}>
             <Logo />
-            <Image src={'/git-icon.svg'} width={23} height={23} alt='Picture of the GitHub' />
+            <Image src={'/git-icon.svg'} width={24} height={24} alt='Picture of the GitHub' />
         </header>
     )
 }
