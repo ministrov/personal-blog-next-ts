@@ -1,9 +1,9 @@
-import { DetailedHTMLProps, HTMLAttributes } from 'react';
+// import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
-export interface BlogCardProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-    img: string;
-    title: string;
-    text: string;
-    timeStamp: number;
-    likes: number;
-}
+// export interface BlogCardProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+//     img: string;
+//     title: string;
+//     text: string;
+//     timeStamp: number;
+//     likes: number;
+// }
