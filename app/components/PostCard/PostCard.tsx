@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { PostCardProps } from './PostCard.props';
 import CardLink from '../CardLink/CardLink';
 
-import styles from './BlogCard.module.css';
+import styles from './PostCard.module.css';
 
 const PostCard = ({ title, body, likes, dislikes }: PostCardProps) => {
     return (
