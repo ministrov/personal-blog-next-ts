@@ -1,12 +1,11 @@
 
 import Image from 'next/image';
-import { PostItem } from '@/interface/posts.interface';
-// import { BlogCardProps } from './BlogCard.props';
+import { PostCardProps } from './PostCard.props';
 import CardLink from '../CardLink/CardLink';
 
 import styles from './BlogCard.module.css';
 
-const BlogCard = ({ title, body, reactions }: PostItem) => {
+const PostCard = ({ title, body, likes, dislikes }: PostCardProps) => {
     return (
         <div className={styles.BlogCard}>
             <div className={styles.cardImage}>
@@ -19,7 +18,7 @@ const BlogCard = ({ title, body, reactions }: PostItem) => {
                 </ul>
 
                 <div className={styles.cardLikes}>
-                    <span>{reactions.likes}</span>
+                    <span>{likes}</span>
                     <Image src={'/like.svg'} width={18} height={18} alt='Picture of the thumbs up' />
                 </div>
             </div>
@@ -28,7 +27,7 @@ const BlogCard = ({ title, body, reactions }: PostItem) => {
                 <p className={styles.cardTextContent}>{body}</p>
             </div>
             <div className={styles.cardFooter}>
-                <span className={styles.cardTimeStamp}>{reactions.dislikes} минуты</span>
+                <span className={styles.cardTimeStamp}>{dislikes} минуты</span>
 
                 <CardLink />
             </div>
@@ -36,4 +35,4 @@ const BlogCard = ({ title, body, reactions }: PostItem) => {
     )
 }
 
-export default BlogCard;
+export default PostCard;

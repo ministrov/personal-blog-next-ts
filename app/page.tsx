@@ -1,6 +1,6 @@
 import { getPosts } from '@/api/post';
+// import PostCard from './components/PostCard/PostCard';
 // import { PostItem } from '@/interface/posts.interface';
-// import BlogCard from './components/BlogCard/BlogCard';
 // import BlogCard from './components/BlogCard/BlogCard';
 // import ButtonLike from './components/ButtonLike/ButtonLike';
 // import BlogCard from './components/BlogCard/BlogCard';
@@ -15,12 +15,13 @@ export default async function Home() {
   return (
     <div className={styles.page}>
       <div className={styles.pageCardList}>
-        {/* {modifiedPosts.map((post: PostItem) => (
-          <BlogCard
+        {/* {modifiedPosts.map((post) => (
+          <PostCard
             key={post.id}
             title={post.title}
             body={post.body}
-            reactions={post.reactions.likes | post.reactions.dislikes}
+            dislikes={post}
+            likes={0}
           />
         ))} */}
       </div>
