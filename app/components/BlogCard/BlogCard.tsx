@@ -1,7 +1,7 @@
 
 import { BlogCardProps } from './BlogCard.props';
 import CardLink from '../CardLink/CardLink';
-import IconLike from '../IconLike/IconLike';
+// import IconLike from '../IconLike/IconLike';
 import Image from 'next/image';
 import styles from './BlogCard.module.css';
 
@@ -19,7 +19,7 @@ const BlogCard = ({ img, title, text, timeStamp, likes }: BlogCardProps) => {
 
                 <div className={styles.cardLikes}>
                     <span>{likes}</span>
-                    <IconLike />
+                    {/* <IconLike /> */}
                 </div>
             </div>
             <div className={styles.cardText}>
