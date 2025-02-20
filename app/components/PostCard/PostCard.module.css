@@ -70,14 +70,14 @@
 }
 
 .postCardTextContent {
-    overflow: hidden;
+    /* overflow: hidden;
     text-overflow: ellipsis;
     max-width: 322px;
-    white-space: nowrap;
+    white-space: nowrap; */
     margin: 0;
     margin-bottom: 21px;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 21px;
     color: var(--grey);
 }
 
