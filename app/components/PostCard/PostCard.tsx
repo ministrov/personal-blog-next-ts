@@ -22,12 +22,12 @@ const PostCard = ({ title, body, likes, dislikes }: PostCardProps) => {
                     <Image src={'/like.svg'} width={18} height={18} alt='Picture of the thumbs up' />
                 </div>
             </div>
-            <div className={styles.cardText}>
-                <h3 className={styles.cardTitle}>{title}</h3>
-                <p className={styles.cardTextContent}>{body}</p>
+            <div className={styles.postCardText}>
+                <h3 className={styles.postCardTitle}>{title}</h3>
+                <p className={styles.postCardTextContent}>{body}</p>
 
-                <div className={styles.cardFooter}>
-                    <span className={styles.cardTimeStamp}>{dislikes} минуты</span>
+                <div className={styles.postCardFooter}>
+                    <span className={styles.postCardTime}>{dislikes} минуты</span>
 
                     <CardLink />
                 </div>
