@@ -1,9 +1,13 @@
 import { API } from '@/app/api'
 
 export async function getPosts() {
-    const response = await fetch(API.posts.all);
+    try {
+        const response = await fetch(API.posts.all);
 
-    return response.json();
+        return response.json();
+    } catch {
+        throw new Error('An error occure');
+    }
 }
 
 // const onPatchRequestHandler = async (id: string) => {
