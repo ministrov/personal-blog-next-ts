@@ -6,7 +6,7 @@
     border-radius: 5px;
 }
 
-.cardImage {
+.postCardImage {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,22 +17,12 @@
     border-radius: 5px;
 }
 
-.cardTitle {
-    min-height: 48px;
-    margin: 0;
-    margin-bottom: 6px;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 24px;
-    color: var(--black);
-}
-
-.cardMeta {
+.postCardMeta {
     display: flex;
     justify-content: space-between;
 }
 
-.cardMetaList {
+.postCardMetaList {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -42,13 +32,13 @@
     list-style: none;
 }
 
-.cardMetaItem {
+.postCardMetaItem {
     font-size: 12px;
     line-height: 16px;
     color: var(--grey);
 }
 
-.cardLikes {
+.postCardLikes {
     display: flex;
     gap: 5px;
     font-size: 12px;
@@ -56,7 +46,17 @@
     color: var(--grey);
 }
 
-.cardTextContent {
+.postCardTitle {
+    min-height: 48px;
+    margin: 0;
+    margin-bottom: 6px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--black);
+}
+
+.postCardTextContent {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 322px;
@@ -68,14 +68,13 @@
     color: var(--grey);
 }
 
-.cardFooter {
+.postCardFooter {
     display: flex;
     justify-content: space-between;
-    /* align-self: flex-end; */
     margin-top: auto;
 }
 
-.cardTimeStamp {
+.postCardTime {
     font-size: 12px;
     line-height: 16px;
     color: var(--grey);
