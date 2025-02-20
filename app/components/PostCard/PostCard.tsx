@@ -1,5 +1,6 @@
 
 import Image from 'next/image';
+import { truncateText } from '@/helpers';
 import { PostCardProps } from './PostCard.props';
 import CardLink from '../CardLink/CardLink';
 
@@ -7,9 +8,7 @@ import styles from './PostCard.module.css';
 
 const PostCard = ({ title, body, likes, dislikes }: PostCardProps) => {
     const fullText = body;
-    const truncatedText = `${fullText.substring(0, 170)}...`;
 
-    console.log(truncatedText);
     return (
         <li className={styles.postCard}>
             <div className={styles.postCardImage}>
@@ -28,7 +27,7 @@ const PostCard = ({ title, body, likes, dislikes }: PostCardProps) => {
                     </div>
                 </div>
                 <h3 className={styles.postCardTitle}>{title}</h3>
-                <p className={styles.postCardTextContent}>{truncatedText}</p>
+                <p className={styles.postCardTextContent}>{truncateText(fullText, 170)}</p>
             </div>
 
             <div className={styles.postCardFooter}>

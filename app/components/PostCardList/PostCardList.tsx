@@ -18,4 +18,4 @@ const PostCardList = ({ posts }: PostCardListProps) => {
     )
 }
 
-export default PostCardList
+export default PostCardList;
