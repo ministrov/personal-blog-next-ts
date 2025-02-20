@@ -33,9 +33,20 @@
 }
 
 .postCardMetaItem {
+    position: relative;
     font-size: 12px;
     line-height: 16px;
     color: var(--grey);
+}
+
+.postCardMetaItem:first-child::after {
+    position: absolute;
+    content: "";
+    top: 7px;
+    right: -9px;
+    width: 2px;
+    height: 2px;
+    background-color: var(--grey);
 }
 
 .postCardLikes {
