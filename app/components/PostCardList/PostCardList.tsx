@@ -8,6 +8,7 @@ const PostCardList = ({ posts }: PostCardListProps) => {
             {posts.map((post) => (
                 <PostCard
                     key={post.id}
+                    id={String(post.id)}
                     title={post.title}
                     body={post.body}
                     dislikes={post.reactions.dislikes}

@@ -7,13 +7,9 @@ export default async function Home() {
   const posts = await getPosts();
   const modifiedPosts: PostItem[] = Object.values(posts.posts);
 
-  console.log(modifiedPosts);
   return (
     <div className={styles.page}>
       <PostCardList posts={modifiedPosts} />
-      {/* <ButtonLike /> */}
-      <br />
-      {/* <ButtonLike onChange={() => onPatchRequestHandler('1')} /> */}
     </div>
   );
 }

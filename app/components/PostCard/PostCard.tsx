@@ -6,7 +6,7 @@ import CardLink from '../CardLink/CardLink';
 
 import styles from './PostCard.module.css';
 
-const PostCard = ({ title, body, likes, dislikes }: PostCardProps) => {
+const PostCard = ({ id, title, body, likes, dislikes }: PostCardProps) => {
     const fullText = body;
 
     return (
@@ -33,7 +33,7 @@ const PostCard = ({ title, body, likes, dislikes }: PostCardProps) => {
             <div className={styles.postCardFooter}>
                 <span className={styles.postCardTime}>{dislikes} минуты</span>
 
-                <CardLink />
+                <CardLink id={id} />
             </div>
         </li>
     )
