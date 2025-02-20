@@ -1,4 +1,4 @@
-import { getPosts } from '@/api/post';
+import { getPosts } from '@/api/posts';
 import PostCardList from './components/PostCardList/PostCardList';
 import { PostItem } from '@/interface/posts.interface';
 import styles from './page.module.css';
