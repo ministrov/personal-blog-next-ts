@@ -1,8 +1,11 @@
+import Link from 'next/link';
 import styles from './Logo.module.css';
 
 const Logo = () => {
+    const fullName = 'Anton Zhilin';
+
     return (
-        <span className={styles.logo}>{`.my_blog${2}`}</span>
+        <Link href={'/'} className={styles.logo}>{fullName}</Link>
     )
 }
 

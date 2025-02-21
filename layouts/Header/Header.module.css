@@ -5,3 +5,8 @@
     padding: 23px 10px;
     background-color: palegoldenrod;
 }
+
+.headerGit:hover,
+.headerGit:active {
+    opacity: 0.7;
+}

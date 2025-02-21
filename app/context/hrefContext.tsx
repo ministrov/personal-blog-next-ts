@@ -18,6 +18,7 @@ export const GitHubProvider = ({ value, children }: GitHubProviderProps) => {
 
 export const useGitHub = (): string => {
     const context = useContext(GitHubContext);
+
     if (!context) {
         throw new Error("useGitHub must be used within a GitHubProvider");
     }
