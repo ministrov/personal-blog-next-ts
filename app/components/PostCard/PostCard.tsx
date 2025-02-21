@@ -7,8 +7,6 @@ import CardLink from '../CardLink/CardLink';
 import styles from './PostCard.module.css';
 
 const PostCard = ({ id, title, body, likes, dislikes }: PostCardProps) => {
-    const fullText = body;
-
     return (
         <li className={styles.postCard}>
             <div className={styles.postCardImage}>
@@ -27,7 +25,7 @@ const PostCard = ({ id, title, body, likes, dislikes }: PostCardProps) => {
                     </div>
                 </div>
                 <h3 className={styles.postCardTitle}>{title}</h3>
-                <p className={styles.postCardTextContent}>{truncateText(fullText, 170)}</p>
+                <p className={styles.postCardTextContent}>{truncateText(body, 170)}</p>
             </div>
 
             <div className={styles.postCardFooter}>

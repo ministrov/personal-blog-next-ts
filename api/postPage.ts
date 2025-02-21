@@ -1,8 +1,6 @@
-import { API } from '@/app/api'
-
 export async function getPost(id: string) {
     try {
-        const response = await fetch(API.posts.byId + id);
+        const response = await fetch(`https://dummyjson.com/posts/${id}`);
 
         return response.json();
     } catch {

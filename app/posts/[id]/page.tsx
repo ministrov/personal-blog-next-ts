@@ -1,4 +1,4 @@
-// import { getPost } from '@/api/postPage';
+import { getPost } from '@/api/postPage';
 import ButtonLike from '@/app/components/ButtonLike/ButtonLike';
 
 type PageProps = {
@@ -6,9 +6,9 @@ type PageProps = {
 }
 
 export default async function PostPage({ params }: PageProps) {
-    // const page = getPost((await params).id);
+    const page = getPost((await params).id);
 
-    // console.log(page);
+    console.log(page.then(res => res));
     return (
         <div>
             {`Page Post ${(await params).id}`}
