@@ -1,13 +1,15 @@
-import IconThumbUp from '../IconThumbUp/IconThumbUp';
+import Image from 'next/image';
+import Link from 'next/link';
+import { CardLinkProps } from './CardLink.props';
 import styles from './CardLink.module.css';
 
-const CardLink = () => {
+const CardLink = ({ id }: CardLinkProps) => {
     return (
-        <a className={styles.cardLink} href="#">
+        <Link href={`/posts/${id}`} className={styles.cardLink}>
             Читать
 
-            <IconThumbUp />
-        </a>
+            <Image src={'/arrow.svg'} width={20} height={20} alt='Picture of arrow right' />
+        </Link>
     )
 }
 

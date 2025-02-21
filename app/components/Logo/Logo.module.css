@@ -1,3 +1,11 @@
 .logo {
-    background-color: palegreen;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.logo:hover,
+.logo:active {
+    opacity: 0.7;
 }
