@@ -10,7 +10,7 @@ type PageProps = {
 export default async function PostPage({ params }: PageProps) {
     const page = await getPost((await params).id);
 
-    console.log(page);
+    // console.log(page);
     return (
         <div className={styles.page}>
             <h2>{page.title}</h2>
