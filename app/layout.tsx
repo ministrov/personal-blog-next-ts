@@ -22,11 +22,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const gitHubLink = 'https://github.com/ministrov' as never;
+  const href = 'https://github.com/ministrov';
   return (
     <html lang="ru">
       <body className={`${openSans.variable}`}>
-        <GitHubProvider value={gitHubLink}>
+        <GitHubProvider value={href}>
           <Header />
           <main>
             {children}
