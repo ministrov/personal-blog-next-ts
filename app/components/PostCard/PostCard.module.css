@@ -1,27 +1,30 @@
-.BlogCard {
+.postCard {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     max-width: 350px;
+    min-height: 402px;
     padding: 10px;
     border: 1px solid var(--light-grey);
     border-radius: 5px;
 }
 
-.cardImage {
+.postCardImage {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 330px;
     height: 220px;
-    margin-bottom: 16px;
     background-color: #E5F4FF;
     border-radius: 5px;
 }
 
-.cardMeta {
+.postCardMeta {
     display: flex;
     justify-content: space-between;
 }
 
-.cardMetaList {
+.postCardMetaList {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -31,13 +34,24 @@
     list-style: none;
 }
 
-.cardMetaItem {
+.postCardMetaItem {
+    position: relative;
     font-size: 12px;
     line-height: 16px;
     color: var(--grey);
 }
 
-.cardLikes {
+.postCardMetaItem:first-child::after {
+    position: absolute;
+    content: "";
+    top: 7px;
+    right: -9px;
+    width: 2px;
+    height: 2px;
+    background-color: var(--grey);
+}
+
+.postCardLikes {
     display: flex;
     gap: 5px;
     font-size: 12px;
@@ -45,7 +59,8 @@
     color: var(--grey);
 }
 
-.cardTitle {
+.postCardTitle {
+    min-height: 48px;
     margin: 0;
     margin-bottom: 6px;
     font-size: 18px;
@@ -54,20 +69,21 @@
     color: var(--black);
 }
 
-.cardTextContent {
+.postCardTextContent {
     margin: 0;
     margin-bottom: 21px;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 21px;
     color: var(--grey);
 }
 
-.cardFooter {
+.postCardFooter {
     display: flex;
     justify-content: space-between;
+    margin-top: auto;
 }
 
-.cardTimeStamp {
+.postCardTime {
     font-size: 12px;
     line-height: 16px;
     color: var(--grey);

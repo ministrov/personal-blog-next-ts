@@ -1,7 +1,8 @@
+'use client';
+
 import { useState } from 'react';
+import Image from 'next/image';
 import { ButtonLikeProps } from './ButtonLike.props';
-import IconLike from '../IconLike/IconLike';
-import IconLikeActive from '../IconLikeActive/IconLikeActive';
 import styles from './ButtonLike.module.css';
 
 
@@ -15,7 +16,11 @@ const ButtonLike = ({ onChange, ...props }: ButtonLikeProps) => {
             }
             setActive(x => !x);
         }} className={`${styles.buttonLike} ${active ? styles.buttonLikeActive : ''}`}>
-            {active ? <IconLikeActive /> : <IconLike />}
+            {active ? (
+                <Image src={'/like-big-white.svg'} width={18} height={18} alt='' />
+            ) : (
+                <Image src={'/like.svg'} width={18} height={18} alt='' />
+            )}
         </button>
     )
 }
