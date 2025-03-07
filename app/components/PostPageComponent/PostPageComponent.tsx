@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
 import { PostPageProps } from './PostPageComponent.props';
+import CardLink from '../CardLink/CardLink';
 import ButtonLike from '@/app/components/ButtonLike/ButtonLike';
 import styles from './PostPageComponent.module.css';
-import CardLink from '../CardLink/CardLink';
 
 export const PostPageComponent = ({ post }: PostPageProps) => {
     return (
@@ -20,7 +20,7 @@ export const PostPageComponent = ({ post }: PostPageProps) => {
                 </li>
             </ul>
 
-            <Image src={'./post-image.png'} width={687} height={440} alt='Post picture' />
+            <Image src={'/post-image.png'} width={687} height={440} alt='Post picture' />
 
             <p className={styles.desc}>{post.body}</p>
 
