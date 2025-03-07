@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
 import { PostPageProps } from './PostPageComponent.props';
-import CardLink from '../CardLink/CardLink';
 import ButtonLike from '@/app/components/ButtonLike/ButtonLike';
 import styles from './PostPageComponent.module.css';
 
@@ -15,8 +14,10 @@ export const PostPageComponent = ({ post }: PostPageProps) => {
                 <li className={styles.item}>назад</li>
                 <li className={styles.item}>3 минуты</li>
                 <li className={styles.item}>
-                    4
-                    <CardLink id={'3'} />
+                    <div className={styles.likes}>
+                        <span>{4}</span>
+                        <Image src={'/like.svg'} width={18} height={18} alt='Picture of the thumbs up' />
+                    </div>
                 </li>
             </ul>
 
@@ -26,9 +27,12 @@ export const PostPageComponent = ({ post }: PostPageProps) => {
 
             <h3 className={styles.subtitle}>{post.title}</h3>
 
-            {post.reactions.dislikes && <span className={styles.dislikes}>{post.reactions.dislikes}</span>}
+            <div className={styles.likesBox}>
+                <span>Всего лайков:</span>
+                {post.reactions.dislikes && <span className={styles.dislikes}>{post.reactions.dislikes}</span>}
+            </div>
 
-            <p>
+            <p className={styles.secondDesc}>
                 Грид представляет собой пересекающийся набор горизонтальных и вертикальных линий, образующих колонки и строки. Элементы могут быть помещены в грид в пределах линий этих колонок и строк. Грид имеет следующие особенности:
             </p>
 
