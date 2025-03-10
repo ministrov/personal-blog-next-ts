@@ -21,7 +21,7 @@ export const PostPageComponent = ({ post }: PostPageProps) => {
                 </li>
             </ul>
 
-            <Image src={'/post-image.png'} width={687} height={440} alt='Post picture' />
+            <Image src={'/post-image.png'} quality={85} loading='lazy' width={687} height={440} alt='Post picture' />
 
             <p className={styles.desc}>{post.body}</p>
 
