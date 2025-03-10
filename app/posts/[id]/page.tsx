@@ -9,6 +9,9 @@ type PageProps = {
 
 export default async function PostPage({ params }: PageProps) {
     const page = await fetchPostPageById((await params).id);
+    const comments = '';
+
+    console.log(comments);
 
     console.log(page);
 
