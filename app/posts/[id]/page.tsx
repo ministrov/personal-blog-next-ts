@@ -2,6 +2,7 @@ import { fetchPostPageById } from '@/api/postPage';
 import { PostPageComponent } from '@/app/components/PostPageComponent/PostPageComponent';
 
 import styles from '../../page.module.css';
+import { getComments } from '@/api/comments';
 
 type PageProps = {
     params: Promise<{ id: string }>
@@ -9,15 +10,13 @@ type PageProps = {
 
 export default async function PostPage({ params }: PageProps) {
     const page = await fetchPostPageById((await params).id);
-    const comments = '';
-
-    console.log(comments);
+    const comments = await getComments();
 
     console.log(page);
 
     return (
         <div className={styles.page}>
-            <PostPageComponent post={page} comments={page.tags} />
+            <PostPageComponent post={page} comments={comments.comments} />
         </div>
     )
 }

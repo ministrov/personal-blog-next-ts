@@ -4,6 +4,7 @@ import { PostPageProps } from './PostPageComponent.props';
 import { Comment } from '../Comment/Comment';
 import ButtonLike from '@/app/components/ButtonLike/ButtonLike';
 import styles from './PostPageComponent.module.css';
+import { IComment } from '@/interface/comment.interface';
 
 export const PostPageComponent = ({ post, comments }: PostPageProps) => {
     return (
@@ -42,9 +43,9 @@ export const PostPageComponent = ({ post, comments }: PostPageProps) => {
                 <ButtonLike />
             </div>
 
-            {comments.map((comment: string) => (
+            {comments.map((comment: IComment) => (
                 <Comment
-                    key={comment}
+                    key={comment.id}
                     comment={comment}
                 />
             ))}
