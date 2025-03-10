@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import React from 'react';
 import { PostPageProps } from './PostPageComponent.props';
+import { Comment } from '../Comment/Comment';
 import ButtonLike from '@/app/components/ButtonLike/ButtonLike';
 import styles from './PostPageComponent.module.css';
 
-export const PostPageComponent = ({ post }: PostPageProps) => {
+export const PostPageComponent = ({ post, comments }: PostPageProps) => {
     return (
         <div className={styles.postWrapper}>
             <h2 className={styles.title}>{post.title}</h2>
@@ -40,6 +41,13 @@ export const PostPageComponent = ({ post }: PostPageProps) => {
                 <span>Понравилось? Жми</span>
                 <ButtonLike />
             </div>
+
+            {comments.map((comment: string) => (
+                <Comment
+                    key={comment}
+                    comment={comment}
+                />
+            ))}
         </div>
     )
 }

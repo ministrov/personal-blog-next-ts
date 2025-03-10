@@ -14,7 +14,7 @@ export default async function PostPage({ params }: PageProps) {
 
     return (
         <div className={styles.page}>
-            <PostPageComponent post={page} />
+            <PostPageComponent post={page} comments={page.tags} />
         </div>
     )
 }
