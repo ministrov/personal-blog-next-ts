@@ -12,6 +12,8 @@ export default async function PostPage({ params }: PageProps) {
     const page = await fetchPostPageById((await params).id);
     const comments = await getComments();
 
+    console.log(comments.comments);
+
     console.log(page);
 
     return (

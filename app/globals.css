@@ -1,9 +1,10 @@
 :root {
   --font-family: 'Open Sans', sans-serif;
   --black: #2C2C2C;
-  --light-grey: #F5F5F5;
+  --grey-light: #F5F5F5;
   --grey: #6E6E6E;
   --grey-dark: #303030;
+  --grey-dark: #4B4B4B;
   --primary: #1473E6;
 
 }
