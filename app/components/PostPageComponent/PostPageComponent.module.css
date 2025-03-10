@@ -1,8 +1,14 @@
+.postWrapper {
+    padding-top: 25px;
+}
+
 .post {
     background-color: turquoise;
 }
 
 .title {
+    margin: 0;
+    margin-bottom: 12px;
     font-size: 34px;
     font-weight: 700;
     line-height: 40px;
@@ -15,6 +21,11 @@
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+.likes {
+    display: flex;
+    gap: 8px;
 }
 
 .desc {

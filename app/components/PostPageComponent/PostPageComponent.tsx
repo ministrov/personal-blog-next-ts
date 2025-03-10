@@ -28,7 +28,7 @@ export const PostPageComponent = ({ post }: PostPageProps) => {
             <h3 className={styles.subtitle}>{post.title}</h3>
 
             <div className={styles.likesBox}>
-                <span>Всего лайков:</span>
+                <span>All likes:</span>
                 {post.reactions.dislikes && <span className={styles.dislikes}>{post.reactions.dislikes}</span>}
             </div>
 
