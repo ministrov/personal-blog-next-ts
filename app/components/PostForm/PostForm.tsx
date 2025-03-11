@@ -6,7 +6,7 @@ export const PostForm = () => {
             <input className={styles.input} name="forminput" type="text" placeholder="Имя" />
             <textarea className={styles.textarea} name="textarea" id="" placeholder="Комментарий"></textarea>
 
-            <button className={styles.button}>Отправить</button>
+            <button className={styles.button} type='button'>Отправить</button>
         </form>
     )
 }
