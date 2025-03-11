@@ -6,3 +6,7 @@
     line-height: 16px;
     color: #1473E6;
 }
+
+.cardLink:hover {
+    opacity: 0.7;
+}
