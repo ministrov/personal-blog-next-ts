@@ -5,6 +5,7 @@ import { Comment } from '../Comment/Comment';
 import ButtonLike from '@/app/components/ButtonLike/ButtonLike';
 
 import styles from './PostPageComponent.module.css';
+import { PostForm } from '../PostForm/PostForm';
 
 export const PostPageComponent = ({ post, comment }: PostPageProps) => {
     return (
@@ -47,6 +48,8 @@ export const PostPageComponent = ({ post, comment }: PostPageProps) => {
                 postId={post.id}
                 comment={comment}
             />
+
+            <PostForm />
         </div>
     )
 }
