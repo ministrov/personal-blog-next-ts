@@ -3,10 +3,10 @@ import React from 'react';
 import { PostPageProps } from './PostPageComponent.props';
 import { Comment } from '../Comment/Comment';
 import ButtonLike from '@/app/components/ButtonLike/ButtonLike';
-import { IComment } from '@/interface/comment.interface';
+// import { IComment } from '@/interface/comment.interface';
 import styles from './PostPageComponent.module.css';
 
-export const PostPageComponent = ({ post, comments }: PostPageProps) => {
+export const PostPageComponent = ({ post }: PostPageProps) => {
     return (
         <div className={styles.postWrapper}>
             <h2 className={styles.title}>{post.title}</h2>
@@ -43,12 +43,17 @@ export const PostPageComponent = ({ post, comments }: PostPageProps) => {
                 <ButtonLike />
             </div>
 
-            {comments.map((comment: IComment) => (
+            {/* {comments.map((comment: IComment) => (
                 <Comment
                     key={comment.id}
                     comment={comment}
                 />
-            ))}
+            ))} */}
+
+            <Comment
+                postId={post.id}
+            // comment={comment}
+            />
         </div>
     )
 }

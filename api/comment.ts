@@ -1,6 +1,6 @@
 export async function fetchCommentById(postId: string) {
     try {
-        const response = await fetch(`https://dummyjson.com/comments?postId=${postId}`);
+        const response = await fetch(`https://dummyjson.com/comments/post/${postId}`);
 
         return await response.json();
     } catch {
