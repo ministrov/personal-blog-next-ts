@@ -3,8 +3,8 @@ import React from 'react';
 import { PostPageProps } from './PostPageComponent.props';
 import { Comment } from '../Comment/Comment';
 import ButtonLike from '@/app/components/ButtonLike/ButtonLike';
-import styles from './PostPageComponent.module.css';
 import { IComment } from '@/interface/comment.interface';
+import styles from './PostPageComponent.module.css';
 
 export const PostPageComponent = ({ post, comments }: PostPageProps) => {
     return (
