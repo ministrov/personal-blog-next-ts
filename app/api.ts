@@ -1,6 +1,6 @@
 export const API = {
     posts: {
-        all: 'https://dummyjson.com/posts', 
+        all: 'https://dummyjson.com/posts?limit=12', 
         byId: 'https://dummyjson.com/posts/:id'
     }, 
     comments: {
