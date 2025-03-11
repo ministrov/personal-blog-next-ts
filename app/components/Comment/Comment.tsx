@@ -13,7 +13,6 @@ export const Comment = ({ postId, comment }: CommentProps) => {
 
             <p className={styles.description}>
                 {comment.body ?? "Отличная статья, но не хватает информации о том, как лучше реализовать на гридах более сложные конструкции, например layout для интернет магазина."}
-                {/* {comment.body} */}
             </p>
             {postId}
         </div>
