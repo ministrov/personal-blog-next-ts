@@ -2,6 +2,7 @@
 
 import { useForm } from 'react-hook-form';
 import { IPostForm } from './PostForm.interface';
+import cn from 'classnames';
 import styles from './PostForm.module.css';
 
 export const PostForm = () => {
@@ -11,12 +12,13 @@ export const PostForm = () => {
         console.log(data);
     };
 
-    console.log(errors);
     return (
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
             <div className={styles.wrapper}>
                 <input {...register("name", { required: { value: true, message: "Entering name is required" }, maxLength: 10 })}
-                    className={styles.input}
+                    className={cn(styles.input, {
+                        [styles.error]: errors.name
+                    })}
                     type="text"
                     placeholder="Имя"
                 />
@@ -26,7 +28,9 @@ export const PostForm = () => {
 
             <div className={styles.wrapper}>
                 <textarea {...register("comment", { required: { value: true, message: "Entering comment is required" }, maxLength: 150 })}
-                    className={styles.textarea}
+                    className={cn(styles.textarea, {
+                        [styles.error]: errors.comment
+                    })}
                     placeholder="Комментарий"
                 ></textarea>
 
