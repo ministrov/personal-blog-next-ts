@@ -1,11 +1,10 @@
 import Link from 'next/link';
+import { LogoProps } from './Logo.props';
 import styles from './Logo.module.css';
 
-const Logo = () => {
-    const fullName = 'Anton Zhilin';
-
+const Logo = ({ name }: LogoProps) => {
     return (
-        <Link href={'/'} className={styles.logo}>{fullName}</Link>
+        <Link href={'/'} className={styles.logo}>{name}</Link>
     )
 }
 

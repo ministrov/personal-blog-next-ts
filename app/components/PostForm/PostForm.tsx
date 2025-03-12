@@ -15,7 +15,7 @@ export const PostForm = () => {
     return (
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
             <div className={styles.wrapper}>
-                <input {...register("name", { required: { value: true, message: "Entering name is required" }, maxLength: 10 })}
+                <input {...register("name", { required: { value: true, message: "Введите имя, не более 10 букв" }, pattern: /^[A-Za-z]+$/, maxLength: 10 })}
                     className={cn(styles.input, {
                         [styles.error]: errors.name
                     })}
@@ -27,7 +27,7 @@ export const PostForm = () => {
             </div>
 
             <div className={styles.wrapper}>
-                <textarea {...register("comment", { required: { value: true, message: "Entering comment is required" }, maxLength: 150 })}
+                <textarea {...register("comment", { required: { value: true, message: "Введите комментарий" }, maxLength: 150 })}
                     className={cn(styles.textarea, {
                         [styles.error]: errors.comment
                     })}
