@@ -6,6 +6,10 @@
     max-width: 634px;
 }
 
+.wrapper {
+    width: 100%;
+}
+
 .input {
     width: 100%;
     padding: 19px 29px;
@@ -48,4 +52,10 @@
    border-radius: 8px;
    background-color: var(--grey-dark);
    cursor: pointer;
+}
+
+.errorMessage {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--error);
 }

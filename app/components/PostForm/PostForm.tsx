@@ -14,13 +14,24 @@ export const PostForm = () => {
     console.log(errors);
     return (
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-            <input {...register("name", { required: { value: true, message: "Entering name is required" }, maxLength: 10 })} className={styles.input} name="name" type="text" placeholder="Имя" />
+            <div className={styles.wrapper}>
+                <input {...register("name", { required: { value: true, message: "Entering name is required" }, maxLength: 10 })}
+                    className={styles.input}
+                    type="text"
+                    placeholder="Имя"
+                />
 
-            {/* {errors.name && <p>{errors.comment}</p>} */}
+                {errors.name && <span className={styles.errorMessage}>{errors.name.message}</span>}
+            </div>
 
-            <textarea {...register("comment", { required: { value: true, message: "Entering comment is required" }, maxLength: 150 })} className={styles.textarea} name="comment" id="" placeholder="Комментарий"></textarea>
+            <div className={styles.wrapper}>
+                <textarea {...register("comment", { required: { value: true, message: "Entering comment is required" }, maxLength: 150 })}
+                    className={styles.textarea}
+                    placeholder="Комментарий"
+                ></textarea>
 
-            {/* {errors.comment && <p>{errors.comment}</p>} */}
+                {errors.comment && <span className={styles.errorMessage}>{errors.comment.message}</span>}
+            </div>
 
             <button className={styles.button} type='submit'>Отправить</button>
         </form>
