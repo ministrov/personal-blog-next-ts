@@ -10,10 +10,7 @@ type PageProps = {
 
 export default async function PostPage({ params }: PageProps) {
     const page = await fetchPostPageById((await params).id);
-    const comment = await fetchCommentById((await params).id)
-
-    console.log(comment);
-    console.log(comment.comments);
+    const comment = await fetchCommentById((await params).id);
 
     return (
         <div className={styles.page}>
