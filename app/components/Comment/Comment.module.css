@@ -1,0 +1,44 @@
+.comment {
+    margin-bottom: 24px;
+}
+
+.title {
+    margin: 0;
+    margin-bottom: 24px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 34px;
+    color: var(--black);
+}
+
+.user {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 0;
+    margin-bottom: 24px;
+    padding: 0;
+    list-style: none;
+}
+
+.userTitle {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    color: var(--black);
+}
+
+.userEmail {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--grey);
+}
+
+.description {
+    margin: 0;
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--black);
+}

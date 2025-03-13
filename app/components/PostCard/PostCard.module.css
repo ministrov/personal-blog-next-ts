@@ -5,7 +5,7 @@
     max-width: 350px;
     min-height: 402px;
     padding: 10px;
-    border: 1px solid var(--light-grey);
+    border: 1px solid var(--grey-light);
     border-radius: 5px;
 }
 

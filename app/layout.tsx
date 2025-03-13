@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import Footer from '@/layouts/Footer/Footer';
 import Header from '@/layouts/Header/Header';
-import { GitHubProvider } from './context/hrefContext';
 import "./globals.css";
 
 const openSans = Open_Sans({
@@ -22,16 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const href = 'https://github.com/ministrov';
   return (
     <html lang="ru">
       <body className={`${openSans.variable}`}>
-        <GitHubProvider value={href}>
-          <Header />
-          <main>
-            {children}
-          </main>
-        </GitHubProvider>
+        <Header />
+        <main>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
