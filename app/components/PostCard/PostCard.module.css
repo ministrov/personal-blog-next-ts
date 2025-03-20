@@ -13,8 +13,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 330px;
     height: 220px;
+    margin-bottom: 12px;
     background-color: #E5F4FF;
     border-radius: 5px;
 }
@@ -22,6 +22,7 @@
 .postCardMeta {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 12px;
 }
 
 .postCardMetaList {
@@ -62,7 +63,7 @@
 .postCardTitle {
     min-height: 48px;
     margin: 0;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;

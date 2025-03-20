@@ -11,10 +11,9 @@ import styles from './PostCard.module.css';
 const PostCard = ({ id, title, body, likes, dislikes }: PostCardProps) => {
     return (
         <motion.li
-        // className={styles.postCard}
-        // initial={{ transform: "translateX(-1400px)" }}
-        // animate={{ transform: "translateX(0px)" }}
-        // transition={{ type: "spring" }}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ ease: "easeOut", duration: 1.2 }}
         >
             <div className={styles.postCardImage}>
                 <Image src={'/card-image.png'} width={300} height={192} priority alt={'A placeholder for the image'} />
