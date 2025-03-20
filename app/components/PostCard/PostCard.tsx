@@ -1,5 +1,7 @@
+'use client';
 
 import Image from 'next/image';
+import { motion } from 'motion/react';
 import { truncateText } from '@/helpers';
 import { PostCardProps } from './PostCard.props';
 import CardLink from '../CardLink/CardLink';
@@ -8,7 +10,12 @@ import styles from './PostCard.module.css';
 
 const PostCard = ({ id, title, body, likes, dislikes }: PostCardProps) => {
     return (
-        <li className={styles.postCard}>
+        <motion.li
+        // className={styles.postCard}
+        // initial={{ transform: "translateX(-1400px)" }}
+        // animate={{ transform: "translateX(0px)" }}
+        // transition={{ type: "spring" }}
+        >
             <div className={styles.postCardImage}>
                 <Image src={'/card-image.png'} width={300} height={192} priority alt={'A placeholder for the image'} />
             </div>
@@ -33,7 +40,7 @@ const PostCard = ({ id, title, body, likes, dislikes }: PostCardProps) => {
 
                 <CardLink id={id} />
             </div>
-        </li>
+        </motion.li>
     )
 }
 
