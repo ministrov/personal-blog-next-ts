@@ -9,6 +9,7 @@ import CardLink from '../CardLink/CardLink';
 import styles from './PostCard.module.css';
 
 const PostCard = ({ id, title, body, likes, dislikes, custom }: PostCardProps) => {
+    // console.time(id);
     const variants = {
         hidden: { opacity: 0 },
         visible: (index: number) => ({
@@ -25,7 +26,7 @@ const PostCard = ({ id, title, body, likes, dislikes, custom }: PostCardProps) =
             custom={custom}
         >
             <div className={styles.postCardImage}>
-                <Image src={'/card-image.png'} width={300} height={192} priority alt={'A placeholder for the image'} />
+                <Image src={'/card-image.png'} width={300} height={192} alt={'A placeholder for the image'} />
             </div>
             <div className={styles.postCardText}>
                 <div className={styles.postCardMeta}>
