@@ -88,3 +88,10 @@
     line-height: 16px;
     color: var(--grey);
 }
+
+@media screen and (max-width: 1224px) {
+    .postCardImage {
+        width: 100%;
+        height: auto;
+    }
+}

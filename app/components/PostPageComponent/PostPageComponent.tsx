@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import React from 'react';
+import { PostForm } from '../PostForm/PostForm';
 import { PostPageProps } from './PostPageComponent.props';
 import { Comment } from '../Comment/Comment';
 import ButtonLike from '@/app/components/ButtonLike/ButtonLike';
 
 import styles from './PostPageComponent.module.css';
-import { PostForm } from '../PostForm/PostForm';
 
 export const PostPageComponent = ({ post, comment }: PostPageProps) => {
     return (
