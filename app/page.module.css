@@ -3,12 +3,6 @@
   margin: 0 auto;
 }
 
-/* @media screen and (max-width: 1126px) {
-  .page {
-    max-width: 860px;
-  }
-} */
-
 @media screen and (max-width: 426px) {
   .page {
       max-width: 100%;
