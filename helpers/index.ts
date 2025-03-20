@@ -8,7 +8,7 @@ export function truncateText(text: string, maxLength: number):string {
 //     return -1;
 // }
 
-export function icreament(value: number | string) {
+export function incrementValue(value: number | string) {
     if (typeof value === 'number') {
         return `${value + 1}`;
     } else if (typeof value === 'string') {
