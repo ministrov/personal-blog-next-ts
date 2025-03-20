@@ -6,4 +6,5 @@ export interface PostCardProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivE
     body: string;
     dislikes: number;
     likes: number;
+    custom: number;
 }

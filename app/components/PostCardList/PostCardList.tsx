@@ -5,7 +5,7 @@ import styles from './PostCardList.module.css';
 const PostCardList = ({ posts }: PostCardListProps) => {
     return (
         <ul className={styles.postCardList}>
-            {posts.map((post) => (
+            {posts.map((post, index) => (
                 <PostCard
                     key={post.id}
                     id={String(post.id)}
@@ -13,6 +13,7 @@ const PostCardList = ({ posts }: PostCardListProps) => {
                     body={post.body}
                     dislikes={post.reactions.dislikes}
                     likes={post.reactions.likes}
+                    custom={index}
                 />
             ))}
         </ul>

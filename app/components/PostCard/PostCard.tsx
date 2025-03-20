@@ -8,12 +8,21 @@ import CardLink from '../CardLink/CardLink';
 
 import styles from './PostCard.module.css';
 
-const PostCard = ({ id, title, body, likes, dislikes }: PostCardProps) => {
+const PostCard = ({ id, title, body, likes, dislikes, custom }: PostCardProps) => {
+    const variants = {
+        hidden: { opacity: 0 },
+        visible: (index: number) => ({
+            opacity: 1,
+            transition: { delay: index * 0.3 }
+        })
+    }
+
     return (
         <motion.li
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ ease: "easeOut", duration: 1.2 }}
+            variants={variants}
+            initial={'hidden'}
+            animate={'visible'}
+            custom={custom}
         >
             <div className={styles.postCardImage}>
                 <Image src={'/card-image.png'} width={300} height={192} priority alt={'A placeholder for the image'} />
