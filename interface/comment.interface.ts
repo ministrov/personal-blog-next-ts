@@ -1,11 +1,11 @@
 export interface IComment {
+  id: number;
+  body: string;
+  postId: number;
+  likes: number;
+  user: {
     id: number;
-    body: string;
-    postId: number;
-    likes: number;
-    user: {
-        id: number;
-        username: string;
-        fullname: string;
-    }
+    username: string;
+    fullname: string;
+  };
 }

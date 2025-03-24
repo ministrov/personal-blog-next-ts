@@ -1,5 +1,12 @@
-export function truncateText(text: string, maxLength: number):string {
-    return `${text.substring(0, maxLength)}...`;
+export const links = [
+  { id: 1, name: "Blog" },
+  { id: 2, name: "Projects" },
+  { id: 3, name: "About" },
+  { id: 4, name: "Newsletter" },
+];
+
+export function truncateText(text: string, maxLength: number): string {
+  return `${text.substring(0, maxLength)}...`;
 }
 
 // Check if the character not a letter, but special char like ";"
@@ -25,7 +32,6 @@ export function truncateText(text: string, maxLength: number):string {
 //         return cash.get(value);
 //     }
 // };
-
 
 // const memoizedIncrement = memoizeFn(incrementValue);
 

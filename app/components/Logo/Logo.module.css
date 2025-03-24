@@ -1,11 +1,11 @@
 .logo {
-    display: block;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 24px;
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
 }
 
 .logo:hover,
 .logo:active {
-    opacity: 0.7;
+  opacity: 0.7;
 }

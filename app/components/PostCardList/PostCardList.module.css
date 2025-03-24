@@ -1,21 +1,21 @@
 .postCardList {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 24px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 @media screen and (max-width: 1224px) {
-    .postCardList {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
+  .postCardList {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
 }
 
 @media screen and (max-width: 926px) {
-    .postCardList {
-        grid-template-columns:  1fr;
-        justify-items: center;
-    }
+  .postCardList {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }

@@ -1,12 +1,12 @@
 .cardLink {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 12px;
-    line-height: 16px;
-    color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--primary);
 }
 
 .cardLink:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
