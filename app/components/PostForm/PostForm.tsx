@@ -33,7 +33,7 @@ export const PostForm = () => {
         />
 
         {errors.name && (
-          <span className={styles.errorMessage}>{errors.name.message}</span>
+          <span role="alert" className={styles.errorMessage}>{errors.name.message}</span>
         )}
       </div>
 
@@ -50,7 +50,7 @@ export const PostForm = () => {
         ></textarea>
 
         {errors.comment && (
-          <span className={styles.errorMessage}>{errors.comment.message}</span>
+          <span role="alert" className={styles.errorMessage}>{errors.comment.message}</span>
         )}
       </div>
 

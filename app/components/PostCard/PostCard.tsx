@@ -30,6 +30,7 @@ const PostCard = ({
       initial={"hidden"}
       animate={"visible"}
       custom={custom}
+      tabIndex={0}
     >
       <div className={styles.postCardImage}>
         <Image

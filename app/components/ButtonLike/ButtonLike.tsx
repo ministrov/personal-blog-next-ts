@@ -22,7 +22,7 @@ const ButtonLike = ({ onChange, ...props }: ButtonLikeProps) => {
       className={cn(styles.button, {
         [styles.active]: active,
       })}
-      aria-label=''
+      aria-label='Like button'
       {...props}
     >
       {active ? (
