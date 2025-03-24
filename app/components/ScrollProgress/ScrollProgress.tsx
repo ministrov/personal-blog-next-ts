@@ -12,9 +12,9 @@ export const ScrollProgress = () => {
         top: 0,
         left: 0,
         right: 0,
-        height: 10,
+        height: 8,
         originX: 0,
-        backgroundColor: "#ff0088 ",
+        backgroundColor: "#1a1a1a",
       }}
     />
   );
