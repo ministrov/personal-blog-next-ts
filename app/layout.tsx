@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import Footer from '@/layouts/Footer/Footer';
 import Header from '@/layouts/Header/Header';
-import "./globals.css";
 import { ScrollProgress } from './components/ScrollProgress/ScrollProgress';
+import "./globals.css";
 
 const openSans = Open_Sans({
   weight: ['300', '400', '500', '600', '700'],
@@ -25,12 +25,14 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={`${openSans.variable}`}>
-        <Header />
-        <ScrollProgress />
-        <main className="main">
-          {children}
-        </main>
-        <Footer />
+        <div className="page">
+          <Header />
+          <ScrollProgress />
+          <main className="main">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

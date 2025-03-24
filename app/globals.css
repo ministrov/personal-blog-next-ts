@@ -37,3 +37,17 @@ a {
   padding-bottom: 48px;
 }
 
+.page {
+  max-width: 1126px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 426px) {
+  .page {
+    max-width: 100%;
+    margin: initial;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
