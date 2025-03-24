@@ -16,7 +16,6 @@ const PostCard = ({
   dislikes,
   custom,
 }: PostCardProps) => {
-
   const variants = {
     hidden: { opacity: 0 },
     visible: (index: number) => ({

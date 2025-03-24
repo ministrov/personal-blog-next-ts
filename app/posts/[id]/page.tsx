@@ -10,7 +10,5 @@ export default async function PostPage({ params }: PageProps) {
   const page = await fetchPostPageById((await params).id);
   const comment = await fetchCommentById((await params).id);
 
-  return (
-    <PostPageComponent post={page} comment={comment} />
-  );
+  return <PostPageComponent post={page} comment={comment} />;
 }
