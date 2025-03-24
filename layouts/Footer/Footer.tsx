@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.wrapper}>
-        <p className={styles.copyright}>© 2023</p>
+        <p className={styles.copyright}><span>&copy;</span> 2023</p>
 
         <ul className={styles.list}>
           {headerLinks.map((link) => (

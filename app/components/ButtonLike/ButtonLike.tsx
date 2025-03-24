@@ -9,18 +9,21 @@ import styles from "./ButtonLike.module.css";
 const ButtonLike = ({ onChange, ...props }: ButtonLikeProps) => {
   const [active, setActive] = useState<boolean>(false);
 
+  const onClickHandler = () => {
+    if (onChange) {
+      onChange();
+    }
+    setActive((x) => !x);
+  };
+
   return (
     <button
-      {...props}
-      onClick={() => {
-        if (onChange) {
-          onChange();
-        }
-        setActive((x) => !x);
-      }}
+      onClick={onClickHandler}
       className={cn(styles.button, {
         [styles.active]: active,
       })}
+      aria-label=''
+      {...props}
     >
       {active ? (
         <Image src={"/like-big-white.svg"} width={18} height={18} alt="" />
