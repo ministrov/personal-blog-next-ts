@@ -1,4 +1,4 @@
 export interface IPostForm {
-    name: string;
-    comment: string;
+  name: string;
+  comment: string;
 }

@@ -1,18 +1,37 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import Logo from '@/app/components/Logo/Logo';
-import styles from './Header.module.css';
+import Image from "next/image";
+import Link from "next/link";
+import Logo from "@/app/components/Logo/Logo";
+import { links } from "@/helpers";
+import styles from "./Header.module.css";
 
 const Header = () => {
-    return (
-        <header className={styles.header}>
-            <Logo name='Anton Zhilin' />
+  return (
+    <header className={styles.header}>
+      <Logo name="Anton Zhilin" />
 
-            <Link href={`#rt`}>
-                <Image className={styles.headerGit} src={'/git-icon.svg'} width={24} height={24} alt='Picture of the GitHub' />
-            </Link>
-        </header>
-    )
-}
+      <div className={styles.right}>
+        <nav className={styles.navigation}>
+          <ul className={styles.list}>
+            {links.map((link) => (
+              <li key={link.id} className={styles.item}>
+                <Link href={`/${link.name}`}>{link.name}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <Link href={`#rt`}>
+          <Image
+            className={styles.headerGit}
+            src={"/git-icon.svg"}
+            width={24}
+            height={24}
+            alt="Picture of the GitHub"
+          />
+        </Link>
+      </div>
+    </header>
+  );
+};
 
 export default Header;

@@ -1,5 +1,5 @@
-import { PostItem } from '@/interface/posts.interface';
+import { PostItem } from "@/interface/posts.interface";
 
 export interface PostCardListProps {
-    posts: PostItem[]
+  posts: PostItem[];
 }

@@ -1,3 +1,3 @@
 export interface CardLinkProps {
-    id: string
+  id: string;
 }

@@ -1,11 +1,35 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 23px 10px;
-    background-color: palegoldenrod;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 0;
 }
 
 .headerGit:hover,
 .headerGit:active {
-    opacity: 0.7;
+  opacity: 0.7;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  padding: 8px;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--second-black);
+  transition: color 0.5s ease-in-out;
+}
+
+.item:hover {
+  opacity: 0.7;
 }

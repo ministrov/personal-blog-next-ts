@@ -1,90 +1,98 @@
 .postCard {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    max-width: 350px;
-    min-height: 402px;
-    padding: 10px;
-    border: 1px solid var(--grey-light);
-    border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 350px;
+  min-height: 402px;
+  padding: 10px;
+  border: 1px solid var(--grey-light);
+  border-radius: 5px;
 }
 
 .postCardImage {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 330px;
-    height: 220px;
-    background-color: #E5F4FF;
-    border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  margin-bottom: 12px;
+  background-color: #e5f4ff;
+  border-radius: 5px;
 }
 
 .postCardMeta {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
 }
 
 .postCardMetaList {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .postCardMetaItem {
-    position: relative;
-    font-size: 12px;
-    line-height: 16px;
-    color: var(--grey);
+  position: relative;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--grey);
 }
 
 .postCardMetaItem:first-child::after {
-    position: absolute;
-    content: "";
-    top: 7px;
-    right: -9px;
-    width: 2px;
-    height: 2px;
-    background-color: var(--grey);
+  position: absolute;
+  content: "";
+  top: 7px;
+  right: -9px;
+  width: 2px;
+  height: 2px;
+  background-color: var(--grey);
 }
 
 .postCardLikes {
-    display: flex;
-    gap: 5px;
-    font-size: 12px;
-    line-height: 24px;
-    color: var(--grey);
+  display: flex;
+  gap: 5px;
+  font-size: 12px;
+  line-height: 24px;
+  color: var(--grey);
 }
 
 .postCardTitle {
-    min-height: 48px;
-    margin: 0;
-    margin-bottom: 6px;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 24px;
-    color: var(--black);
+  min-height: 48px;
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--black);
 }
 
 .postCardTextContent {
-    margin: 0;
-    margin-bottom: 21px;
-    font-size: 14px;
-    line-height: 21px;
-    color: var(--grey);
+  margin: 0;
+  margin-bottom: 21px;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--grey);
 }
 
 .postCardFooter {
-    display: flex;
-    justify-content: space-between;
-    margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
 }
 
 .postCardTime {
-    font-size: 12px;
-    line-height: 16px;
-    color: var(--grey);
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--grey);
+}
+
+@media screen and (max-width: 1224px) {
+  .postCardImage {
+    width: 100%;
+    height: auto;
+  }
 }
