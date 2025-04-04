@@ -1,19 +1,29 @@
-import { createContext, ReactNode, useContext } from 'react';
+'use client';
 
-type MyUserContextProps = {
-  children: ReactNode;
+import { createContext, useContext, ReactNode, useState } from 'react';
+
+type UserContextType = {
   userId: number;
-}
-
-const MyUserContext = createContext<number | null>(null);
-
-export const MyUserContextProvider = ({ children, userId }: MyUserContextProps) => {
-  return (
-    <MyUserContext.Provider value={userId}>
-      {/* {console.log('Provider value:', userId)} */}
-      {children}
-    </MyUserContext.Provider>
-  );
+  setUserId: (id: number) => void;
 };
 
-export const useUser = () => useContext(MyUserContext);
+const UserContext = createContext<UserContextType | undefined>(undefined);
+
+export function MyUserContextProvider({ children, initialId }: { children: ReactNode, initialId?: number }) {
+  const [userId, setUserId] = useState<number>(initialId || 0);
+
+  return (
+    <UserContext.Provider value={{ userId, setUserId }}>
+      {children}
+    </UserContext.Provider>
+  );
+}
+
+export function useUserContext() {
+  const context = useContext(UserContext);
+  console.log(context);
+  if (context === undefined) {
+    throw new Error('useUserContext must be used within a MyUserContextProvider');
+  }
+  return context;
+}

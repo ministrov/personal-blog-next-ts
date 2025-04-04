@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useUserContext } from '@/app/context/user-context';
 import { motion } from "motion/react";
 import { truncateText } from "@/helpers";
 import { PostCardProps } from "./PostCard.props";
@@ -16,6 +17,10 @@ const PostCard = ({
   dislikes,
   custom,
 }: PostCardProps) => {
+  const { userId } = useUserContext();
+
+  console.log(userId);
+
   const variants = {
     hidden: { opacity: 0 },
     visible: (index: number) => ({
@@ -67,6 +72,7 @@ const PostCard = ({
 
         <CardLink id={id} />
       </div>
+      {/* <p>{userId}</p> */}
     </motion.li>
   );
 };
